@@ -1,0 +1,12 @@
+<p>product works!</p>
+<div>
+    <h2>New Book: {{productName}}</h2>
+</div>
+<form (ngSubmit)="onAddBook(f)" #f="ngForm">
+    <input type="text" ngModel name="productName" required>
+    <button type="submit" >Change</button>
+</form>
+<div>
+    <app-card (bookClicked)="onRemoveBook(product)" *ngFor="let product of products" [bookName]="product"></app-card>
+</div>
+
