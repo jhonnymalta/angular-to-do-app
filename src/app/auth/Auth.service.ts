@@ -2,7 +2,11 @@ import { User } from "./User.model"
 import { AuthDatha } from "./Auth-Data.model"
 import { Subject } from "rxjs";
 
+
+
 export class AuthService{
+
+    
     private user: User | any;
     authChange = new Subject<boolean>();
     
@@ -17,7 +21,7 @@ export class AuthService{
     }
 
 
-    Login(authDatha: AuthDatha){
+    Login(authDatha: AuthDatha, ){
         this.user = {
             email: authDatha.email,
             userId: Math.round(Math.random() * 10000).toString()     
@@ -35,7 +39,9 @@ export class AuthService{
       return  {...this.user}
     }
 
-    IsAuth(){
-        return this.user != null;
+    IsAuth(){        
+        return this.user != null;       
+         
+       
     }
 }

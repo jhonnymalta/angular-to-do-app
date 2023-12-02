@@ -1,8 +1,9 @@
-<div class="container-fluid  bg-slate-400 h-14 p-4">
+<div class="container-fluid  bg-slate-400 h-full p-4">
     <div class="container mx-auto flex justify-between">
         <ul class="flex">
             <li class="mr-7"><a routerLink="/" >Home</a></li>
-            <li *ngIf="isAuth"><a routerLink="/products" > Product</a></li>
+            <li *ngIf="isAuth"><a routerLink="/products" class="mr-2">To-Do List |</a></li>
+            <li *ngIf="isAuth"><a routerLink="/exercise" class="mr-2">Exercise</a></li>
         </ul>
 
         <ul class="flex">

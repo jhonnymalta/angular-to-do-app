@@ -1,18 +1,29 @@
-<div class="text-2xl text-blue-800"> Login Form</div>
 
-<div class="bg-slate-400 p-4">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
-        <div class="grid grid-cols-4 gap-4 mb-4">
-            <label for="email">Email</label>
-            <input type="text" ngModel name="email"/>
+
+<div class=" flex h-full justify-center items-center">
+    
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="grid grid-cols-3 gap-4" >
+       
+        <div>
+
         </div>
-        <div class="grid grid-cols-4 gap-4 mb-4">
-            <label for="">Password</label>
-            <input type="text" ngModel name="Password"/>
+        <div class="bg-gray-200 p-4 shadow-lg">
+            <div class="text-2xl text-blue-800 text-center bold mb-6"> Login </div>
+            <div class="grid grid-cols-4 gap-4 mb-4">
+                <label for="email">Email:</label>
+                <input type="text" ngModel name="email" class="col-span-3"/>
+            </div>
+            <div class="grid grid-cols-4 gap-4 mb-4">
+                <label for="">Password:</label>
+                <input type="text" ngModel name="Password" class="col-span-3"/>
+            </div>
+            <div >
+                <input type="submit" value="Sign in" class="bg-blue-500 text-white py-2 px-4 rounded-md  hover:bg-blue-600">
+            </div>
+
         </div>
-        <div class="bg-slate-100">
-            <input type="submit" value="Sign in" class="bg-blue-500 text-white py-2 px-4 rounded-md  hover:bg-blue-600">
-        </div>
+        <div></div>
+        
     </form>
 
 </div>
